@@ -11,12 +11,20 @@ test('should merge two tailwind themes', () => {
       header: {
         base: 'p-7',
       },
+      listItem: {
+        base: 'min-h-[3.5rem] min-w-[50%] w-100',
+      },
     },
   }
   const theme = {
     button: {
       button: {
         base: 'p-10 m-3',
+      },
+    },
+    section: {
+      listItem: {
+        base: 'min-h-0 min-w-0',
       },
     },
   }
@@ -32,6 +40,9 @@ test('should merge two tailwind themes', () => {
     section: {
       header: {
         base: 'p-7',
+      },
+      listItem: {
+        base: 'w-100 min-h-0 min-w-0',
       },
     },
   })
