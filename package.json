@@ -1,6 +1,6 @@
 {
   "name": "@aboutbits/react-ui-integrations",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Webpack and Tailwind integration for ReactUI",
   "main": "dist/index.js",
   "engines": {
