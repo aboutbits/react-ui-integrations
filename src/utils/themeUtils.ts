@@ -3,8 +3,12 @@ import mergeWith from 'lodash.mergewith'
 import { twMerge } from 'tailwind-merge'
 import { type ReactUIConfig, type ThemeStructure } from '../types'
 
+export const getTheme = (config: ReactUIConfig): ThemeStructure => {
+  return mergeThemes(defaultTheme, config.theme || {})
+}
+
 export const getThemeAsJson = (config: ReactUIConfig): string => {
-  return JSON.stringify(mergeThemes(defaultTheme, config.theme || {}))
+  return JSON.stringify(getTheme(config))
 }
 
 export const mergeThemes = (base: ThemeStructure, override: ThemeStructure) => {

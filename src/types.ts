@@ -1,16 +1,17 @@
 import { OverrideTheme } from '@aboutbits/react-ui'
 
-export interface ReactUIConfig {
+export type ReactUIConfig = {
   theme?: OverrideTheme
 }
 
-export interface WebpackPluginOptions {
-  themeVariable?: string
+export type BaseConfigOptions = {
   configFile?: string
 }
 
-export interface TailwindPluginOptions {
-  configFile?: string
-}
+export type WebpackPluginOptions = {
+  themeVariable?: string
+} & BaseConfigOptions
+
+export type TailwindPluginOptions = BaseConfigOptions
 
 export type ThemeStructure = { [key: string]: ThemeStructure | string }
