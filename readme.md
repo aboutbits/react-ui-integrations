@@ -131,6 +131,24 @@ module.exports = {
 - `themeVariable`: Configure the variable name to which the ReactUI theme will be bound (by Webpack's DefinePlugin).
 - `configFile`: Absolute path to an alternative configuration file
 
+### Jest
+
+`webpack.config.js`:
+
+```js
+const { getTheme } = require('@aboutbits/react-ui-integrations')
+
+module.exports = {
+  globals: {
+    REACTUI_THEME: getTheme(),
+  },
+}
+```
+
+**Optional configuration options**
+
+- `configFile`: Absolute path to an alternative configuration file
+
 ## Configuration
 
 These configuration options are available to be set in the `reactui.config.js`:
