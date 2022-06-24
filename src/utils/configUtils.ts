@@ -1,8 +1,8 @@
 import { type ReactUIConfig } from '../types'
-import { find } from './fileUtils'
+import resolveConfigPath from './fileUtils'
 
 export const getConfigFile = (file = 'reactui.config.js'): string => {
-  const reactUiConfigFilePath = find(file)
+  const reactUiConfigFilePath = resolveConfigPath(file)
 
   if (reactUiConfigFilePath === null) {
     throw new Error('ReactUI config file not found.')

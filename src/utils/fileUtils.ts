@@ -1,21 +1,14 @@
 import fs from 'fs'
 import path from 'path'
 
-export const find = (...args: string[]): string | null => {
-  const rel = path.join.apply(null, [].slice.call(args))
-  return findStartingWith(path.dirname(require.main?.filename || ''), rel)
-}
-
-const findStartingWith = (start: string, rel: string): string | null => {
-  const file = path.join(start, rel)
+export default function resolveConfigPath(configFile: string) {
   try {
-    fs.statSync(file)
-    return file
+    const configPath = path.resolve(configFile)
+    fs.accessSync(configPath)
+    return configPath
   } catch (err) {
-    // They are equal for root dir
-    if (path.dirname(start) !== start) {
-      return findStartingWith(path.dirname(start), rel)
-    }
-    return null
+    console.error('ReactUI config file not found.')
   }
+
+  return null
 }
