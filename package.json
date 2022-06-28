@@ -4,8 +4,8 @@
   "description": "Webpack and Tailwind integration for ReactUI",
   "main": "dist/index.js",
   "engines": {
-    "node": ">=14",
-    "npm": ">=7"
+    "node": "^16",
+    "npm": "^8"
   },
   "scripts": {
     "build": "npm run build:node && npm run build:esm",
