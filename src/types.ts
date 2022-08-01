@@ -1,7 +1,7 @@
-import { OverrideTheme } from '@aboutbits/react-ui'
+import { Theme } from '@aboutbits/react-ui'
 
 export type ReactUIConfig = {
-  theme?: OverrideTheme
+  theme?: Theme
 }
 
 export type BaseConfigOptions = {
