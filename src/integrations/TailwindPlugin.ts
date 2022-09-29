@@ -11,7 +11,10 @@ export default (options?: TailwindPluginOptions) => {
     const content = config().content
 
     if ('files' in content) {
-      content.files.push(configFilePath, {
+      if (configFilePath) {
+        content.files.push(configFilePath)
+      }
+      content.files.push({
         raw: getThemeAsJson(reactUIConfig),
         extension: 'json',
       })
