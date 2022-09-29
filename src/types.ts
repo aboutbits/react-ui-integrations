@@ -1,7 +1,10 @@
 import { Theme } from '@aboutbits/react-ui'
 
 export type ReactUIConfig = {
-  theme?: Theme
+  theme?: {
+    override?: Theme
+    merge?: Theme
+  }
 }
 
 export type BaseConfigOptions = {
