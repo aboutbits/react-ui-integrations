@@ -1,9 +1,13 @@
 import { Theme } from '@aboutbits/react-ui'
 
+type RecursivePartial<T> = {
+  [P in keyof T]?: RecursivePartial<T[P]>
+}
+
 export type ReactUIConfig = {
   theme?: {
-    override?: Theme
-    merge?: Theme
+    override?: RecursivePartial<Theme>
+    merge?: RecursivePartial<Theme>
   }
 }
 
