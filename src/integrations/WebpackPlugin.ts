@@ -28,9 +28,11 @@ export default class ReactUIWebpackPlugin implements WebpackPluginInstance {
             const config = getConfig(configFile)
             return getThemeAsJson(config)
           },
-          {
-            fileDependencies: [configFile],
-          }
+          configFile
+            ? {
+                fileDependencies: [configFile],
+              }
+            : undefined
         ),
     }
 
