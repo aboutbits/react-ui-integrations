@@ -33,7 +33,8 @@ This is a collection of tools for various libraries to integrate [About Bit's Re
    ```js
    module.exports = {
      theme: {
-       [...]
+       override: [...],
+       merge: [...]
      }
    }
    ```
@@ -153,9 +154,9 @@ module.exports = {
 
 These configuration options are available to be set in the `reactui.config.js`:
 
-- `theme`
+- `theme.override` / `theme.merge`
 
-  Extend ReactUI theme configuration. Will be merged with the ReacUI's default theme configuration.
+  Extend ReactUI theme configuration. Starting with version 1.0 you have the option to override or merge the ReacUI's default theme configuration.
 
 ## Build & Publish
 
