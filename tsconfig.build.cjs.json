@@ -6,8 +6,7 @@
     "moduleResolution": "node",
     "outDir": "./dist/cjs",
     "declaration": true,
-    "importHelpers": true,
-    "skipLibCheck": true
+    "importHelpers": true
   },
   "exclude": ["**/__test__/*", "**/__tests__/*"],
   "include": ["src"]
