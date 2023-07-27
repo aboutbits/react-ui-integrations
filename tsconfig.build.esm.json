@@ -1,14 +1,9 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "strict": true,
     "target": "ES6",
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "outDir": "./dist/esm",
-    "declaration": true,
-    "importHelpers": true
+    "outDir": "./dist/esm"
   },
-  "exclude": ["**/__test__/*", "**/__tests__/*"],
+  "exclude": ["**/__test__/*"],
   "include": ["src"]
 }

@@ -1,13 +1,10 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "strict": true,
     "target": "ES5",
-    "esModuleInterop": true,
     "moduleResolution": "node",
-    "outDir": "./dist/cjs",
-    "declaration": true,
-    "importHelpers": true
+    "outDir": "./dist/cjs"
   },
-  "exclude": ["**/__test__/*", "**/__tests__/*"],
+  "exclude": ["**/__test__/*"],
   "include": ["src"]
 }
