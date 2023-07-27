@@ -2,9 +2,12 @@
   "name": "@aboutbits/react-ui-integrations",
   "version": "1.0.3",
   "description": "Webpack and Tailwind integration for ReactUI",
-  "main": "dist/esm/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/esm/index.d.ts",
+      "import": "./dist/esm/index.js"
+    }
+  },
   "engines": {
     "node": "^16",
     "npm": "^8"
