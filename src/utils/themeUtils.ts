@@ -28,5 +28,6 @@ export const mergeTheme = (
     if (typeof baseValues === 'string' && typeof newValues === 'string') {
       return twMerge(baseValues, newValues)
     }
+    return undefined
   })
 }
