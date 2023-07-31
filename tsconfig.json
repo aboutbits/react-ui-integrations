@@ -1,5 +1,7 @@
 {
+  "extends": "@aboutbits/ts-config/react",
   "compilerOptions": {
-    "esModuleInterop": true
-  }
+    "skipLibCheck": true
+  },
+  "include": ["src"]
 }
