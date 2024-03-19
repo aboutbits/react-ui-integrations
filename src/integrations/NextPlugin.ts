@@ -4,7 +4,7 @@ import ReactUIWebpackPlugin from './WebpackPlugin'
 
 export default (
   nextConfig: NextConfig = {},
-  pluginOptions?: WebpackPluginOptions
+  pluginOptions?: WebpackPluginOptions,
 ): NextConfig => {
   return Object.assign({}, nextConfig, {
     webpack(config, options) {
