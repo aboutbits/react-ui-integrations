@@ -32,7 +32,7 @@ export default class ReactUIWebpackPlugin implements WebpackPluginInstance {
             ? {
                 fileDependencies: [configFile],
               }
-            : undefined
+            : undefined,
         ),
     }
 

@@ -15,14 +15,14 @@ export const getThemeAsJson = (config: ReactUIConfig): string => {
 
 export const overrideTheme = (
   baseTheme: ThemeStructure,
-  newTheme: ThemeStructure
+  newTheme: ThemeStructure,
 ) => {
   return mergeWith({}, baseTheme, newTheme)
 }
 
 export const mergeTheme = (
   baseTheme: ThemeStructure,
-  newTheme: ThemeStructure
+  newTheme: ThemeStructure,
 ) => {
   return mergeWith({}, baseTheme, newTheme, (baseValues, newValues) => {
     if (typeof baseValues === 'string' && typeof newValues === 'string') {
